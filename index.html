@@ -345,23 +345,22 @@ WHERE tp.post_id = 25;
                     <section>
                         <h3>Documenti vs Relazionale</h3>
                         Esempio: blog (documenti)
-                        <pre><code data-trim contenteditable class="javascript">
+                        <pre ><code data-trim contenteditable class="javascript">
 {
     "_id" : ObjectId("3329e84fa45603fbb374bc3d"),
-    "author" : "albert",
+    "author" : {
+        "name": "Albert",
+        "surname": "Einstein"
+    },
+    "title" : "Il mio post",
     "body" : "Il mio post",
     "comments" : [{
-        author: "enrico",
-        body: "bellissimo post."
-    },
-    {
-        author: "nicola",
-        body: "pessimo post."
-    }],
+        "author": "enrico",
+        "body": "bellissimo post."
+    }, ... ],
     "date" : ISODate("2013-09-20T15:21:32.543Z"),
     "permalink" : "Il_mio_post",
-    "tags" : ["mongo", "database"],
-    "title" : "Il mio post"
+    "tags" : ["mongo", "database"]
 }
                         </code></pre>
                     </section>
