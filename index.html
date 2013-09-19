@@ -329,14 +329,13 @@ ON p.autore = a.id
 WHERE p.id = 25;
                         </code></pre>
                         <pre class="fragment"><code data-trim contenteditable class="sql">
-SELECT * FROM Post p JOIN Commento c
-ON c.post_id = p.id
-WHERE p.id = 25;
+SELECT * FROM Commento c
+WHERE c.post_id = 25;
                         </code></pre>
                         <pre class="fragment"><code data-trim contenteditable class="sql">
-SELECT * FROM Post p JOIN Tag_post tp
-ON p.id = tp.post_id JOIN Tag t ON t.id = tp.tag_id
-WHERE p.id = 25;
+SELECT * FROM Tag_post tp JOIN Tag t
+ON t.id = tp.tag_id
+WHERE tp.post_id = 25;
                         </code></pre>
                         <img class="fragment" src="img/Jackie-Chan-WTF.jpeg" />    
                     </section>
